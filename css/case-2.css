@@ -1,0 +1,118 @@
+/* body {
+    background-color: blue;
+    height: 500vh;
+}
+.container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 300px;
+    height: 300px;
+    border-radius: 100%;
+    background-color: white;
+}
+.inside-circle{
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    border-radius: 100%;
+    background-color: rgb(88, 85, 85);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.container > .inside-circle > span{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.arc {
+    position: absolute;
+    width: 150px; 
+    height: 150px;
+    background-color: red;
+    border-radius: 100% 0 0 0 ; 
+    top: 75px;
+    left: 75px;
+    transform: translate(-50%, -50%); 
+    
+}
+
+.container:hover .arc {
+    animation: go-around 4s linear 1; 
+}
+
+@keyframes go-around {
+    0% { top: 0; left: 50%; transform: translate(-50%, 0) rotate(0deg); }
+    25% { top: 50%; left: 100%; transform: translate(-100%, -50%) rotate(90deg); }
+    50% { top: 100%; left: 50%; transform: translate(-50%, -100%) rotate(180deg); }
+    75% { top: 50%; left: 0; transform: translate(0, -50%) rotate(270deg); }
+    100% { top: 0; left: 50%; transform: translate(-50%, 0) rotate(360deg); }
+} */
+
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #0062ff;
+  }
+  
+  .outer-circle {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  
+  .circle {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: #4b5563;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .red-border {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 10px solid transparent;
+    border-top-color: #ef4444;
+  }
+  
+  .circle:hover .red-border {
+    animation: rotate360 1s linear;
+  }
+  
+  @keyframes rotate360 {
+    from {
+      transform: translateX(-50%) rotate(0deg);
+    }
+    to {
+      transform: translateX(-50%) rotate(360deg);
+    }
+  }
