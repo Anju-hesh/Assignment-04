@@ -30,7 +30,7 @@ body {
 }
 
 @keyframes slide {
-    /* Forward Animation */
+    
     0% {
         transform: translateX(-300vw);
     }
